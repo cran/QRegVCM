@@ -5,7 +5,7 @@
 Variability Estimation and Testing
 }
 \description{
-The adapted He (1997) approach considering a general hetersocedastic varying-coefficient model, V(X(t),t).
+Estimating and Testing the variability function using the following hetersocedastic varying-coefficient model.
 \deqn{Y(t)=\sum_{k=0}^{p}\beta_{k}(t)X^{(k)}(t)+V(X(t),t)\epsilon(t)}
 where V(X(t),t) one of the six variability function in Gijbels etal (2017).
 }
@@ -32,7 +32,7 @@ The response vector.
 The order of differencing operator for each covariate.
 }
 \item{kn}{
-The number of internal knots for each covariate.
+The number of knot intervals for each covariate.
 }
 \item{degree}{
 The degree of B-spline basis for each covariate.
@@ -55,7 +55,7 @@ The number of bootstrap samples used.
 The seed for the random generator in the bootstrap resampling.
 }
 \item{test}{
-To request for testing the variability function ("Y" for test
+To request for testing the specific shape of the variability function ("Y" for test
 and "N" for only estimation of the parameters, the default is "Y").
 }
 \item{model}{
@@ -90,11 +90,11 @@ The variability model used to estimate the quantile of errors
 \references{
 %Andriyana, Y. (2015). P-splines quantile regression in varying coefficient models. \emph{Doctoral Dissertation}, KU Leuven, Department of Mathematics, January 2015.
 
-Gijbels, I., Ibrahim, M. A., and Verhasselt, A. (2017b). Testing the heteroscedastic error structure in quantile varying coefficient models.\emph{Submitted}.
-
 Andriyana, Y. and Gijbels, I. & Verhasselt, A. (2014). P-splines quantile regression estimation in varying coefficient models. \emph{Test}, 23, 153-194.
 
-Andriyana, Y., Gijbels, I. and Verhasselt, A. (2017). Quantile regression in varying-coefficient models: non-crossing quantile curves and heteroscedasticity. \emph{Statistical Papers}, to appear. DOI:10.1007/s00362-016-0847-7
+Andriyana, Y., Gijbels, I. and Verhasselt, A. (2017). Quantile regression in varying-coefficient models: non-crossing quantile curves and heteroscedasticity. \emph{Statistical Papers,} DOI:10.1007/s00362-016-0847-7.
+
+Gijbels, I., Ibrahim, M. A., and Verhasselt, A. (2017). Testing the heteroscedastic error structure in quantile varying coefficient models. \emph{The Canadian Journal of Statistics,} DOI:10.1002/cjs.11346.
 
 He, X. (1997). Quantile curves without crossing. \emph{The American Statistician}, 51, 186-192.
 }
@@ -111,7 +111,7 @@ Some warning messages are related to the function \code{\link[quantreg]{rq.fit.s
 %\code{\link{quantreg}}%, SparseM, truncSP}}%, ~~~
 \code{\link[quantreg]{rq.fit.sfn}}
 \code{\link[SparseM]{as.matrix.csr}}
-\code{\link{truncSP}}
+%\code{\link{truncSP}}
 %\code{\link{quantreg}}
 %\code{\link{SparseM}}
 %\code{\link{truncSP}}

@@ -1,6 +1,6 @@
 #' QRVCP for models 4 and 5
 #'
-#' This function calculates the Betas using the alphas obtained from intpoint_grl().
+#' This function calculates the Betas using the alphas obtained from intpoint_gl().
 #'
 #' @section Note:
 #' Some warning messages are related to the function \code{\link{rq.fit.sfn}} 
@@ -31,8 +31,6 @@
 #' @seealso \code{\link{rq.fit.sfn}} \code{\link{as.matrix.csr}} 
 #'
 #' @export
-# this function calculates the Betas using the alphas obtained from intpoint_gl()
-# function 
 qrvcp_gl = function(times, subj, y, X, tau, kn, degree, lambda, d,range){
   dim = length(subj)
   X = matrix(X, nrow = dim)

@@ -32,9 +32,6 @@
 #' @seealso \code{\link{rq.fit.sfn}} \code{\link{as.matrix.csr}} 
 #'
 #' @export
-## This function calculates the range of the Beta_hats using B-splines and then
-#  using Lamb_gl() it searches for the global smoothing parameter
-
 lambdak_gl <- function(times, subj, X, y, d, tau, kn, degree, lambda, gam){
   dim = length(subj)
   X = matrix(X, nrow = dim)
